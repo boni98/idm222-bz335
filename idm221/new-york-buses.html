@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="nav bar">
+        <nav>
+          <a href="index.html"><img class="navbar-brand" src="images/logo.png" alt="logo"></a>
+          <ul>
+            <li><a href="#footer"><i class="fa fa-fw fa-bars fa-3x"></i></a></li>
+          </ul>
+        </nav>
+       </div>
+    </div>
+  </header>
+
+  <main>
+      <h3>New York Buses</h3>
+      <img src="images/NYBuses/Banner.png" alt="new-york-city-banner">
+      <div>
+          <h4>About the Project</h4>
+          <p>
+              New York Buses is set to release our all-new website, allowing commuters to live-track their train, doing away with the stress of possibly missing their ride. 
+              Using MTA's API, we have built a comprehensive website for the people of New York to stay up to date with buses all over the city.
+              Using our website, commuters will never have to miss another train again!
+          </p>
+          <p>Role: Product Owner, UI/UX Designer, Full-stack Developer</p>
+          <p>Duration: Sept 2020 - Mar 2021</p>
+      </div>
+
+      <div>
+        <h4>UI Design</h4>
+        <p>
+            We wanted to create a webstie that was mobile-friendly so it is accessible to use on the go.
+            The main functionality is the map page where users can input their start and end destination
+            to get a list of bus timestatmps near them. The other functionality is a history page where 
+            users can save their history with a registered account.
+        </p>
+        <img src="images/NYBuses/Register.png" alt="new-york-city-registration-page">
+        <img src="images/NYBuses/Sign-in.png" alt="new-york-city-sign-in-page">
+        <img src="images/NYBuses/Map.png" alt="new-york-city-map-page">
+        <img src="images/NYBuses/History.png" alt="new-york-city-history-page">
+    </div>
+
+    <div>
+        <h4>Key Challenges:</h4>
+        <ul class="otis">
+            <li><p>Data migration from API to the website</p></li>
+            <li><p>Integration of HTML/CSS to Django frameworks</p></li>
+            <li><p>Improving accessibility</p></li>
+        </ul>
+    </div>
+
+    <div>
+        <h4>Results</h4>
+        <div class ="wrapper">
+            <p>Minimal Viable Product</p>
+            <video width="800" height="400" controls autoplay poster="media/mvp.png">
+                <source src="media/mvp.mov" />
+            </video>
+            <p>Final Product</p>
+            <video width="800" height="400" controls autoplay poster="media/final.png">
+                <source src="media/final.mov" />
+            </video>
+        </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container fluid">
+        <nav id="footer">
+          <ul><li><a href="index.html"><img class="navbar-brand-footer" src="images/logo.png" alt="logo"></a></li></ul>
+          <ul><li><a href="portfolio.html"><i class="fa fa-fw fa-file"></i>Portfolio</a></li></ul>
+          <ul><li><a href="about.html"><i class="fa fa-fw fa-user"></i>About</a></li></ul>
+          <ul><li><a href="https://www.linkedin.com/in/boni-zhang/"><i class="fa fa-fw fa-linkedin fa-2x"></i></a></li></ul>
+        </nav>
+        <p><i class="fa fa-fw fa-envelope"></i>bonizhang2@gmail.com</p>
+        <p class="pb-1 mb-0">© Boni Zhang, 2021</p>
+      </div>
+  </footer>
+
+</body>
+</html>

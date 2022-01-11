@@ -1,0 +1,216 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Merriweather', serif;
+  margin: 0;
+  text-align: center;
+}
+
+img { 
+  max-width: 100%; 
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.background{
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 200%;
+  max-width: 300%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.fluid {
+  max-width: none;
+  margin:0;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 5rem;
+}
+
+.wrapper {
+  background-color: #fff;
+  margin: auto;
+}
+
+p{
+  font-size: 24px;
+  color: black;
+}
+
+/* headers */
+header {
+  background-color: black;
+  padding: 3rem ;
+}
+
+h1 {
+  font-size: 560%;
+  color: white;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  z-index: 1;
+}
+
+h2 {
+  color: white;
+  position: absolute;
+  
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #11999E;
+  font-size: 5rem;
+}
+
+h4{
+  font-size: 1.5rem;
+  color: #11999E;
+}
+
+.home-sub{
+  color: white;
+  margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  top: 42%;
+  left: 50%;
+  z-index: 1;
+}
+
+/* navigation bar */
+nav {
+  text-align: right;
+}
+
+.navbar {
+  background: black;
+}
+  
+.navbar-brand {
+  width: 5rem;
+  height: 5rem;
+  overflow: hidden;
+  margin-top: 5rem;
+  margin-left: 3rem;
+  float: left;
+  color: #fff;
+}
+
+.navbar-brand-footer {
+  width: 5rem;
+  height: 5rem;
+  overflow: hidden;
+  margin-top: 1rem;
+  float: left;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 2rem;
+  padding: 3rem;
+}
+
+nav ul li a {
+  color: #f8f8f8;
+  font-size: 2.5rem;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #72b6b8;
+}
+
+/* projects */
+.projects .row {
+  overflow: auto;
+}
+
+.projects .row .col {
+  width: 100%;
+}
+
+.projects figcaption {
+  color: #444;
+  font-size: 1.5rem;
+  padding: .5rem 0;
+  text-align: center;
+}
+
+.project-image{
+  box-shadow: 0px 6px 5px rgb(0 0 0 / 40%);
+  border-radius: 3%;
+}
+
+/* footer */
+footer {
+  background-color: gray;
+  color: white;
+}
+
+#footer {
+  padding-top: 2rem;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+.pb-1 { 
+  padding-bottom: 1rem;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+/* about page */
+.otis {
+  list-style: none;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.portrait {
+  width: 50rem;
+  box-shadow: 0px 6px 5px rgb(0 0 0 / 40%);
+  border-radius: 3%;
+}
+
+.about-header {
+  font-size: 1.5rem;
+  color: #11999E;
+}
