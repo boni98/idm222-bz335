@@ -4,57 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boni Zhang</title>
+    <title>Boni Zhang | Portfolio</title>
+    <link rel="icon" href="images/logo.png">
     <link href="css/normalize.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
 </head>
 <body>
-    <section class="section">
+    <header>
+        <!-- Mobile Nav -->
+        <nav class="mobile-nav">
+            <div role="img" class="mobile-nav__button" id="button-container">
+                <!-- Menu icon -->
+                <svg id="open-button" class="mobile-nav__menu-icon mobile-nav__menu-icon--closed" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <!-- Close button icon -->
+                <svg id="close-button" class="mobile-nav__menu-icon mobile-nav__menu-icon--open" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </div>
+            <ul class="mobile-nav__list" id="mobile-menu">
+                <li class="mobile-nav__list-item">
+                    <a class="mobile-nav__list-link" href="#">Home</a>
+                </li>
+                <li class="mobile-nav__list-item">
+                    <a class="mobile-nav__list-link" href="#">About</a>
+                </li>
+                <li class="mobile-nav__list-item">
+                    <a class="mobile-nav__list-link" href="#">Portfolio</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Desktop Nav -->
         <nav class="nav">
             <img class="nav__logo" src="images/logo.png" />
             <ul class="nav__list">
                 <li class="nav__list-item">
-                    <a class="nav__list-link" href="">Portfolio</a>
+                    <a class="nav__list-link" href="index.html">Home</a>
                 </li>
                 <li class="nav__list-item">
-                    <a class="nav__list-link" href="">About</a>
+                    <a class="nav__list-link" href="#">About</a>
                 </li>
                 <li class="nav__list-item">
-                    <a class="nav__list-link" href="">Contact</a>
+                    <a class="nav__list-link" href="#portfolio">Portfolio</a>
                 </li>
             </ul>
         </nav>
-        <div class="container">
-            <div class="container__child"></div>
-        </div>
-    </section>
+    </header>
 
     <main>
         <section class="hero">
-            <div class="wrapper hero__wrapper">
-                <h1 class="hero__title">Hi my name is Boni Zhang</h1>
-                <p class="hero__subtitle">Developer and Designer</p>
-                <div class="hero__underline"></div>
+            <div class="hero__wrapper">
+                <h1 class="hero__title">Hi, my name is Boni Zhang</h1>
+                <p class="hero__subtitle">Custom-Design Major in Innovativing Interactive Installations</p>
             </div>
         </section>
     </main>
-    <section class="section section--blue dogs">
-        <img class="plants" src="images/plants.png" />
-        <img class="daisy" src="images/daisy diary.png" />
-        <img class="dogs__pic" src="https://www.akc.org/wp-content/uploads/2016/06/German-Shepherd-Dog-laying-down-in-the-backyard-500x487.jpeg" />
-        <img class="dogs__pic" src="https://www.akc.org/wp-content/uploads/2016/06/German-Shepherd-Dog-laying-down-in-the-backyard-500x487.jpeg" />
-        <img class="dogs__pic" src="https://www.akc.org/wp-content/uploads/2016/06/German-Shepherd-Dog-laying-down-in-the-backyard-500x487.jpeg" />
-        <img class="dogs__pic" src="https://www.akc.org/wp-content/uploads/2016/06/German-Shepherd-Dog-laying-down-in-the-backyard-500x487.jpeg" />
+    <section class="portfolio">
+        <img class="portfolio__pics" src="images/plants.png" />
+        <img class="portfolio__pics" src="images/daisy diary.png" />
     </section>
-    <section class="section big-pics">
-        <h1>shows off object-fit & object-postion</h1>
-        <img class="big-pics__pic" src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2020%2F08%2F15%2Fstanding-german-shepherd-151533956-2000.jpg" />
-    </section>
-    
-        <footer class="grid-areas__footer">
-            <p class="desc">footer</p>
-            <img class="grid-areas__footer-logo" src="https://logos-world.net/wp-content/uploads/2020/12/Lays-Logo.png" />
-        </footer>
-    </section>
+    <footer class="footer">
+        <img class="footer__logo" src="images/logo.png" />
+    </footer>
 </body>
 </html>

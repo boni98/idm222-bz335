@@ -6,11 +6,79 @@
     padding: 0;
 }
 
-.nav {
-    align-items: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
+.mobile-nav__menu-icon {
+    background-color: transparent;
+    margin-left: auto;
+    max-width: 150px;
+    stroke: blue;
+    stroke-width: 1.5;
+    position: fixed;
+    width: 15%;
+    z-index: 500;
+}
+
+.mobile-nav__button {
+    display: flex;
+}
+
+.mobile-nav__list {
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.mobile-nav__list-item {
+    list-style-type: none;
+}
+
+.mobile-nav__list-link {
+    display: block;
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    margin: 20px 0;
+    padding: 20px 0;
+}
+
+.mobile-nav__list {
+    transform: translate(100vw);
+}
+
+.mobile-nav__list--open {
+    animation: slideOpen .15s ease-in forwards;
+}
+
+.mobile-nav__list--close {
+    animation: slideClosed .15s ease-in forwards;
+}
+
+@keyframes slideOpen {
+    from {
+        transform: translate(100vw);
+    }
+    to {
+        transform: translate(0);
+    }
+}
+
+@keyframes slideClosed {
+    from {
+        transform: translate(0);
+    }
+    to {
+        transform: translate(100vw);
+    }
+}
+
+.mobile-nav__menu-icon--open {
+    display: none;
 }
 
 .nav__logo {
@@ -31,16 +99,20 @@
     padding: 25px;
 }
 
-.nav__btns {
-    justify-self: end;
-}
 
-.nav__btn {
-    background-color: black;
-    border-radius: 11px;
-    color: white;
-    cursor: pointer;
-    padding: 15px 20px;
+/* Once we grow beyond 700px, do this... */
+@media screen and (min-width: 320px) {
+
+    /* Make our big nav visible */
+    .nav {
+        display: grid;
+        justify-items: center;
+    }
+
+    /* Hide our mobile nav */
+    .mobile-nav {
+        display: none;
+    }
 }
 
 .section {
@@ -52,7 +124,48 @@
     background-color: lightskyblue;
 }
 
-.dogs {
+.hero {
+    background-color: var(--color-black);
+    padding: var(--section-padding);
+}
+
+.hero__wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.hero__title {
+    /* lets use the animation called "fadeIn" */
+    /* the animation will last .5s */
+    /* we'll use the ease-in timing function */
+    /* we have a delay of .75s */
+    /* and we'll use "forwards" to keep the styles from the last frame of our animation */
+    animation: fadeIn .5s ease-in;
+    color: var(--color-foreground);
+    font-size: 5rem;
+    margin-bottom: 35px;
+    /* This will keep the text invisible while the animation is delayed 
+    opacity: 0;*/
+}
+
+.hero__subtitle {
+    /* We can reuse animations! */
+    animation: fadeIn .5s ease-in;
+    color: var(--color-foreground);
+    font-size: 1.5rem;
+}
+
+.hero__underline {
+    animation: grow 1s ease-in forwards;
+    background-color: #545454;
+    height: 2px;
+    margin: 0 0 50px 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    width: 100%;
+}
+
+.portfolio {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -62,7 +175,7 @@
     padding: 25px;
 }
 
-.dogs__pic {
+.portfolio__pics {
     width: 100%;
 }
 
@@ -76,53 +189,6 @@
     width: 30%;
 }
 
-.grid-areas {
-    display: grid;
-    grid-template-areas:
-        "navigation navigation navigation"
-        "aside main main"
-        "pic main main"
-        "footer footer footer"
-    ;
-}
-
-.grid-areas__footer-logo {
+.footer__logo {
     width: 150px;
 }
-
-.grid-areas__nav {
-    padding: 50px;
-    background-color: white;
-    grid-area: navigation;
-}
-
-.grid-areas__sidebar {
-    background-color: black;
-    grid-area: aside;
-    min-width: 200px;
-    min-height: 300px;
-}
-
-.grid-areas__main-content {
-    grid-area: main;
-    background-color: burlywood;
-}
-
-.grid-areas__footer {
-    background-color: cornsilk;
-    grid-area: footer;
-    padding: 100px;
-}
-
-.grid-areas__pic {
-    grid-area: pic;
-    width: 100%;
-}
-
-.desc {
-    background-color: lightgreen;
-    color: black;
-    font-weight: bolder;
-    padding: 15px;
-}
-
