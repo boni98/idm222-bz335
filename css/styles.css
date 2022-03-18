@@ -1,127 +1,93 @@
 * {
     border: none;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
 }
 
-.mobile-nav__menu-icon {
-    background-color: transparent;
-    margin-left: auto;
-    max-width: 150px;
-    stroke: blue;
-    stroke-width: 1.5;
-    position: fixed;
-    width: 15%;
-    z-index: 500;
+/*** NAVBAR ***/
+.nav{
+    border-bottom: 1px solid gray;
+} 
+
+.nav__toggle {
+    position: absolute;
+    cursor: pointer;
+    margin: 0rem 1rem;
+    right: 0;
 }
 
-.mobile-nav__button {
-    display: flex;
+.nav__toggle svg {
+    width: 1.5rem;
+    fill: gray;
+}
+    
+.nav__toggle .close {
+    display: none;
+}
+    
+.nav__toggle .menu {
+    margin-top: 0.2rem;
 }
 
-.mobile-nav__list {
-    background-color: lightgrey;
+.nav__checkbox {
+    display: none;
+}
+
+.nav__menu {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    padding: 50px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
+    gap: 2rem;
+    align-items: center;
+    margin: 1rem;
 }
 
-.mobile-nav__list-item {
-    list-style-type: none;
-}
-
-.mobile-nav__list-link {
-    display: block;
-    font-size: 1.5rem;
-    text-align: center;
-    text-decoration: none;
-    margin: 20px 0;
-    padding: 20px 0;
-}
-
-.mobile-nav__list {
-    transform: translate(100vw);
-}
-
-.mobile-nav__list--open {
-    animation: slideOpen .15s ease-in forwards;
-}
-
-.mobile-nav__list--close {
-    animation: slideClosed .15s ease-in forwards;
-}
-
-@keyframes slideOpen {
-    from {
-        transform: translate(100vw);
-    }
-    to {
-        transform: translate(0);
-    }
-}
-
-@keyframes slideClosed {
-    from {
-        transform: translate(0);
-    }
-    to {
-        transform: translate(100vw);
-    }
-}
-
-.mobile-nav__menu-icon--open {
+.nav__menu li {
+    list-style: none;
     display: none;
+}
+
+.nav__menu li:first-child {
+    margin-right: auto;
+    display: block;
+}
+
+.nav__menu a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.2rem;
+}
+
+.nav__menu svg {
+    width: 1.5rem;
+    fill: gray;
 }
 
 .nav__logo {
     justify-self: start;
-    width: 125px;
+    width: 1.5rem;
 }
 
-.nav__list {
-    display: flex;
+#nav__checkbox:checked ~ ul.nav__menu li {
+    display: block;
 }
-
-.nav__list-item {
-    list-style-type: none;
+#nav__checkbox:checked ~ label.nav__toggle .close {
+    display: block;
 }
-
-.nav__list-link {
-    text-decoration: none;
-    padding: 25px;
+#nav__checkbox:checked ~ label.nav__toggle .menu {
+    display: none;
 }
-
-
-/* Once we grow beyond 700px, do this... */
-@media screen and (min-width: 320px) {
-
-    /* Make our big nav visible */
-    .nav {
-        display: grid;
-        justify-items: center;
-    }
-
-    /* Hide our mobile nav */
-    .mobile-nav {
+@media only screen and (min-width: 650px) {
+    .nav__toggle {
         display: none;
-    }
-}
-
-.section {
-    background-color: lightpink;
-    padding: 50px 0;
-}
-
-.section--blue {
-    background-color: lightskyblue;
+   }
+    .nav__menu {
+        flex-direction: row;
+   }
+    .nav__menu li {
+        display: block;
+   }
 }
 
 .hero {
