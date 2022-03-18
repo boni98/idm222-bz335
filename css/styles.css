@@ -91,71 +91,38 @@
    }
 }
 
-.hero {
-    background-color: var(--color-black);
-    padding: var(--section-padding);
-}
-
+/** HERO **/
 .hero__wrapper {
     margin: 0 auto;
     max-width: 1200px;
 }
 
 .hero__title {
-    /* lets use the animation called "fadeIn" */
-    /* the animation will last .5s */
-    /* we'll use the ease-in timing function */
-    /* we have a delay of .75s */
-    /* and we'll use "forwards" to keep the styles from the last frame of our animation */
-    animation: fadeIn .5s ease-in;
-    color: var(--color-foreground);
+    color: rgb(118, 172, 219);
     font-size: 5rem;
     margin-bottom: 35px;
-    /* This will keep the text invisible while the animation is delayed 
-    opacity: 0;*/
 }
 
 .hero__subtitle {
-    /* We can reuse animations! */
-    animation: fadeIn .5s ease-in;
-    color: var(--color-foreground);
+    font-size: 3rem;
+    margin-bottom: 35px;
+}
+
+.hero__description {
     font-size: 1.5rem;
+    margin-bottom: 35px;
 }
 
-.hero__underline {
-    animation: grow 1s ease-in forwards;
-    background-color: #545454;
-    height: 2px;
-    margin: 0 0 50px 0;
-    transform: scaleX(0);
-    transform-origin: left;
-    width: 100%;
+.section__spacer {
+    padding: 5rem;
 }
 
-.portfolio {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    justify-items: center;
-    /* grid-row-gap | grid-column-gap */
-    grid-gap: 25px;
-    padding: 25px;
+.section__header {
+    font-size: 3rem;
+    text-align: center;
 }
 
-.portfolio__pics {
-    width: 100%;
-}
-
-/* Showing off object-fit and object-position */
-.big-pics__pic {
-    display: block;
-    height: 1000px;
-    margin: 0 auto;
-    object-fit: cover;
-    object-position: left;
-    width: 30%;
-}
-
+/*** FOOTER ***/
 .footer {
     display: flex;
 	flex-direction: column;
